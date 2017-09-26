@@ -1,0 +1,27 @@
+# Server Configuration
+server:
+  port: 8080
+
+
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags:
+          - urlprefix-${server.context-path:}/${spring.application.name} opts strip=/${spring.application.name}
+          - traefik.frontend.rule=PathPrefixStrip:${server.context-path:/}
+          - statusPageUrlPath=${server.contextPath:}/info
+          - healthCheckUrlPath=${server.contextPath:}/health
+          - extension=jira
+        healthCheckPath: ${server.contextPath:}/health
+        register: true
+      enabled: true
+      retry:
+        max-attempts: 100
+logging:
+  level:
+    com.netflix.discovery.shared.resolver: warn
+
+

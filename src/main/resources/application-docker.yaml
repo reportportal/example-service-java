@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    consul:
+      host: registry
+      discovery:
+        hostname: ${HOSTNAME:${spring.application.name}}
+        prefer-ip-address: false
