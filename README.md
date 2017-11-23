@@ -12,3 +12,4 @@ or go through [example](https://github.com/reportportal/example-service-java/blo
 There are a few more configuration extensions for running service on 
 [dev-machine](https://github.com/reportportal/example-service-java/blob/master/src/main/resources/application-dev-mac.yaml),
 and in [docker](https://github.com/reportportal/example-service-java/blob/master/src/main/resources/application-docker.yaml).
+The service entry point is a java class with some [configurations](https://github.com/reportportal/example-service-java/blob/readme/src/main/java/com/epam/reportportal/extension/myproject/MyApp.java).
