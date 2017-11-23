@@ -3,7 +3,7 @@
 Example of creating simple additional service on java using Spring Boot for ReportPortal. Can be used 
 as getting started sample. The service info is specified in [bootstrap.yaml](https://github.com/reportportal/example-service-java/blob/master/src/main/resources/bootstrap.yaml)
 
-### Talking to ReportPortal
+### Communication with ReportPortal
 
 As ReportPortal has a microservice based architecture it uses Service Discovery with Consul.
 To activate Consul Service Discovery you can follow the next guide: 
